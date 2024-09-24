@@ -1,0 +1,331 @@
+---
+include:
+  - docassemble.AssemblyLine:assembly_line.yml
+---
+metadata:
+  title: >-
+    Letter to Request a Grievance Hearing
+  short title: >-
+    Lettertorequestahearing
+  description: |-
+    This interview helps someone in public housing write a letter to request a grievance hearing.
+  can_I_use_this_form: |
+    If you are a public housing resident and have received a notice from your housing authority, you can use this form to write a letter to request a grievance hearing that you are entitled to.
+  before_you_start: |
+    This interview will help you write a letter to request a grievance hearing.
+    
+    **Be sure to check with your local housing authority - they may have their own template. If that is the case, use their template. This form produces a letter to your housing authority**
+    
+    Before you get started, please gather:
+    
+    1. The notice you received that outlined the action that the housing authority intends to take.
+    2. The facts surrounding your grievance and the action you would like the housing authority to take.
+    3. Your housing authority's address. 
+    
+    When you are finished, you will need to:
+    
+    1. Print your letter.
+    2. Sign your letter.
+    3. Hand deliver or mail your document to the housing authority.
+    4. Verify that you are meeting the time requirements based on the nature of your issue.
+    
+    ▪ Rent: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
+    
+    ▪ Termination of lease: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
+    
+    ▪ Other matters: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
+  maturity: production
+  estimated_completion_minutes: 10
+  estimated_completion_delta: 5
+  LIST_topics: 
+    - "HO-00-00-00-00"
+    - "HO-02-00-00-00"
+    - "HO-03-00-00-00"
+  tags:
+    - "HO-00-00-00-00"
+    - "HO-02-00-00-00"
+    - "HO-03-00-00-00"
+  authors:
+    - Jack Brandt
+  original_form: []
+  original_form_published_on: ""
+  help_page_url: >-
+    https://www.masslegalhelp.org/housing-apartments-shelter/public-subsidized-housing/sample-letters-forms-and-worksheets
+  help_page_title: >-
+    MassLegalHelp
+  allowed_courts: []
+  typical_role: "na"
+  al_weaver_version: "1.11.0"
+  generated_on: "2024-09-24"
+  languages:
+    - en
+  jurisdiction: NAM-US-US+MA
+  review_date: 2024-09-24
+  form_titles:
+    - Letter to Request a Grievance Hearing
+  form_numbers: []
+  update_notes: |
+---
+code: |
+  # This controls the default country and list of states in address field questions
+  AL_DEFAULT_COUNTRY = "US"
+---
+code: |
+  # This controls the default state in address field questions
+  AL_DEFAULT_STATE = "MA"
+---
+code: |
+  github_repo_name =  'docassemble-LetterToRequestAGrievanceHeari'
+---
+code: |
+  interview_short_title = "Write a letter to request a grievance hearing"
+---
+code: |
+  al_form_type = "letter" 
+---
+objects:
+  - users: ALPeopleList.using(there_are_any=True)
+  - other_parties: ALPeopleList.using(ask_number=True,target_number=1)
+---
+sections:
+  - review_letter_to_request_a_grievance_heari: Review your answers
+---
+#################### Interview order #####################
+comment: |
+  Controls order and branching logic for questions specific to this form
+id: interview_order_letter_to_request_a_grievance_heari
+code: |
+  # Set the allowed courts for this interview
+  nav.set_section("review_letter_to_request_a_grievance_heari")
+  user_role = "na"
+  user_ask_role = "na"
+  Information
+  users.gather()
+  set_parts(subtitle=str(users))
+  users[0].address.address
+  set_progress(20)
+  users[0].phone_number
+  other_parties.gather()
+  other_parties[0].address.address
+  set_progress(40)
+  complaint_facts
+  signature_date
+  interview_order_letter_to_request_a_grievance_heari = True
+---
+###################### Main order ######################
+comment: |
+  This block includes the logic for standalone interviews.
+  Delete mandatory: True to include in another interview
+mandatory: True
+code: |
+  al_intro_screen
+  letter_to_request_a_grievance_heari_intro
+  interview_order_letter_to_request_a_grievance_heari
+  signature_date
+  # Store anonymous data for analytics / statistics
+  store_variables_snapshot(
+      persistent=True,
+      data={
+          "zip": showifdef("users[0].address.zip"),
+          "reached_interview_end": True,
+      },
+  )
+  letter_to_request_a_grievance_heari_download
+---
+id: Letter_to_Request_a_Grievance_Hearing
+continue button field: letter_to_request_a_grievance_heari_intro
+question: |
+  Letter to Request a Grievance Hearing
+subquestion: |
+  This interview will help you write a letter to request a grievance hearing.
+  
+  Before you get started, please gather:
+  
+  1. The notice you received that outlined the action that the housing authority intends to take.
+  2. The facts surrounding your grievance and the action you would like the housing authority to take.
+  3. Your housing authority's address. 
+  
+  When you are finished, you will need to:
+  
+  1. Print your letter.
+  2. Sign your letter.
+  3. Hand deliver or mail your document to the housing authority.
+  4. Verify that you are meeting the time requirements based on the nature of your issue.
+  
+  ▪ Rent: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
+  
+  ▪ Termination of lease: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
+  
+  ▪ Other matters: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
+
+  If you are a public housing resident and have received a notice from your housing authority, you can use this form to write a letter to request a grievance hearing that you are entitled to.
+
+  Most people take about 10 minutes to complete this interview.
+---
+id: Information
+question: |
+  Information
+subquestion: |
+  This interview will help you write a letter to request a grievance hearing.
+  
+  **Be sure to check with your local housing authority first - they may have their own template. If that is the case, use their template. This form produces a letter to your housing authority**
+  
+  When prompted, be sure to include the name and address of your housing authority. If you do not know the name of the chair or head of the board, that's okay. Please just provide the name of the office (for example: "Boston Housing Authority")
+continue button field: Information
+---
+id: Why do you want a grievance hearing
+question: |
+  Why do you want a grievance hearing?
+fields:
+  - "Why do you want to request a grievance hearing?": complaint_facts
+    input type: dropdown
+    choices:
+      - I received an eviction notice telling me to leave my apartment.
+      - I have been unable to get repairs made.
+      - I received a rent increase that is higher than what I believe my rent should be.
+---
+id: preview letter_to_request_a_grievance_heari
+question: |
+  Preview your form before you sign it
+subquestion: |
+  Here is a preview of the form you will sign on the next page.   
+  
+  ${ al_recipient_bundle.as_pdf(key='preview') }
+
+  Click the image to open it in a new tab. Click the "Edit answers" button
+  to edit your answers.
+
+  ${ action_button_html(url_action('review_letter_to_request_a_grievance_heari'), label='Edit answers', color='info') }
+  
+  Remember to come back to this window to continue and sign your form.
+continue button field: letter_to_request_a_grievance_heari_preview_question    
+---
+code: |
+  signature_fields = ['users[0].signature']
+---
+id: letter to request a grievance heari review screen
+event: review_letter_to_request_a_grievance_heari
+question: |
+  Review your answers
+review:
+  - Edit: users.revisit
+    button: |
+      **Users**
+
+      % for item in users:
+        * ${ item }
+      % endfor
+  - Edit: signature_date
+    button: |
+      **Date of Signature**:
+      ${ signature_date }
+  - Edit: other_parties.revisit
+    button: |
+      **Other parties**
+
+      % for item in other_parties:
+        * ${ item }
+      % endfor
+  - Edit: complaint_facts
+    button: |
+      **Why do you want to request a grievance hearing?**:
+      ${ complaint_facts }
+---
+continue button field: users.revisit
+question: |
+  Edit users
+subquestion: |
+  ${ users.table }
+
+  ${ users.add_action() }
+---
+table: users.table
+rows: users
+columns:
+  - Phone number: |
+      row_item.phone_number if defined("row_item.phone_number") else ""
+  - Address: |
+      row_item.address.block() if defined("row_item.address.address") else ""
+  - Name: |
+      row_item.name.full() if defined("row_item.name.first") else ""
+  - Signature: |
+      row_item.signature if defined("row_item.signature") else ""
+edit:
+  - phone_number
+  - address.address
+  - name.first
+  - signature
+confirm: True
+
+---
+continue button field: other_parties.revisit
+question: |
+  Edit other_parties
+subquestion: |
+  ${ other_parties.table }
+
+  ${ other_parties.add_action() }
+---
+table: other_parties.table
+rows: other_parties
+columns:
+  - Address: |
+      row_item.address.block() if defined("row_item.address.address") else ""
+  - Name: |
+      row_item.name.full() if defined("row_item.name.first") else ""
+edit:
+  - address.address
+  - name.first
+confirm: True
+
+---
+id: download letter_to_request_a_grievance_heari
+event: letter_to_request_a_grievance_heari_download
+question: |
+  All done
+subquestion: |
+  Thank you ${users}. Your form is ready to download and deliver.
+  
+  View, download and send your form below. Click the "Edit answers" button to fix any mistakes.
+
+  ${ action_button_html(url_action('review_letter_to_request_a_grievance_heari'), label='Edit answers', color='info') }
+  
+  
+  ${ al_user_bundle.download_list_html() }
+  
+
+  ${ al_user_bundle.send_button_html(show_editable_checkbox=True) }
+
+progress: 100
+---
+# ALDocument objects specify the metadata for each template
+objects:
+  - letter_to_request_a_grievance_heari_Post_interview_instructions: ALDocument.using(title="Instructions", filename="letter_to_request_a_grievance_heari_next_steps.docx", enabled=True, has_addendum=False)
+  - letter_to_request_a_grievance_heari_attachment: ALDocument.using(title="Letter to Request a Grievance Hearing", filename="letter_to_request_a_grievance_heari", enabled=True, has_addendum=False, )
+---
+# Bundles group the ALDocuments into separate downloads, such as for court and for the user
+objects:
+  - al_user_bundle: ALDocumentBundle.using(elements=[letter_to_request_a_grievance_heari_Post_interview_instructions, letter_to_request_a_grievance_heari_attachment], filename="letter_to_request_a_grievance_heari", title="All forms to download for your records", enabled=True)
+  - al_recipient_bundle: ALDocumentBundle.using(elements=[letter_to_request_a_grievance_heari_attachment],  filename="letter_to_request_a_grievance_heari", title="All forms to file", enabled=True)
+---
+# Each attachment defines a key in an ALDocument. We use `i` as the placeholder here so the same template is 
+# used for "preview" and "final" keys, and logic in the template checks the value of 
+# `i` to show or hide the user's signature
+attachment:
+  name: Post-interview-Instructions
+  filename: letter_to_request_a_grievance_heari_next_steps
+  docx template file: letter_to_request_a_grievance_heari_next_steps.docx
+  variable name: letter_to_request_a_grievance_heari_Post_interview_instructions[i]
+  skip undefined: True
+  tagged pdf: True
+---
+attachment:
+  name: letter to request a grievance heari
+  filename: letter_to_request_a_grievance_heari
+  variable name: letter_to_request_a_grievance_heari_attachment[i]
+  skip undefined: True
+  docx template file: letter_to_request_a_grievance_heari.docx
+  tagged pdf: True
+
+
+
