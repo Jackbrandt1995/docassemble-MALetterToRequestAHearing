@@ -1,0 +1,315 @@
+{
+    "enable_al_nav_sections": false,
+    "acknowledged_information_use": true,
+    "al_intro_screen": true,
+    "letter_to_request_a_grievance_heari_intro": true,
+    "user_ask_role": "na",
+    "Information": true,
+    "users": {
+        "_class": "docassemble.AssemblyLine.al_general.ALPeopleList",
+        "instanceName": "users",
+        "elements": [
+            {
+                "_class": "docassemble.AssemblyLine.al_general.ALIndividual",
+                "instanceName": "users[0]",
+                "name": {
+                    "_class": "docassemble.base.util.IndividualName",
+                    "instanceName": "users[0].name",
+                    "uses_parts": true,
+                    "first": "Kimberley",
+                    "middle": "Serina Blackburn",
+                    "last": "Wood",
+                    "suffix": "V"
+                },
+                "address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "users[0].address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "users[0].address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false,
+                    "address": "69 Prince St",
+                    "unit": "",
+                    "city": "Boston",
+                    "state": "MA",
+                    "zip": "02113"
+                },
+                "location": {
+                    "_class": "docassemble.base.util.LatitudeLongitude",
+                    "instanceName": "users[0].location",
+                    "gathered": false,
+                    "known": false
+                },
+                "previous_addresses": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddressList",
+                    "instanceName": "users[0].previous_addresses",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.AssemblyLine.al_general.ALAddress"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "other_addresses": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddressList",
+                    "instanceName": "users[0].other_addresses",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.AssemblyLine.al_general.ALAddress"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "mailing_address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "users[0].mailing_address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "users[0].mailing_address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false
+                },
+                "service_address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "users[0].service_address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "users[0].service_address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false
+                },
+                "previous_names": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALNameList",
+                    "instanceName": "users[0].previous_names",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.base.util.IndividualName"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "aliases": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALNameList",
+                    "instanceName": "users[0].aliases",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.base.util.IndividualName"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "preferred_name": {
+                    "_class": "docassemble.base.util.IndividualName",
+                    "instanceName": "users[0].preferred_name",
+                    "uses_parts": true
+                },
+                "mobile_number": "6099416210",
+                "phone_number": "",
+                "email": "jack.brandt.iii@gmail.com",
+                "other_contact_method": ""
+            }
+        ],
+        "auto_gather": true,
+        "ask_number": false,
+        "minimum_number": null,
+        "object_type": {
+            "_class": "type",
+            "name": "docassemble.AssemblyLine.al_general.ALIndividual"
+        },
+        "object_type_parameters": {},
+        "complete_attribute": null,
+        "ask_object_type": false,
+        "there_are_any": true,
+        "there_is_another": false,
+        "gathered": true,
+        "revisit": true
+    },
+    "al_person_answering": "user",
+    "other_parties": {
+        "_class": "docassemble.AssemblyLine.al_general.ALPeopleList",
+        "instanceName": "other_parties",
+        "elements": [
+            {
+                "_class": "docassemble.AssemblyLine.al_general.ALIndividual",
+                "instanceName": "other_parties[0]",
+                "name": {
+                    "_class": "docassemble.base.util.IndividualName",
+                    "instanceName": "other_parties[0].name",
+                    "uses_parts": true,
+                    "first": "Macias and Ayers Inc"
+                },
+                "address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "other_parties[0].address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "other_parties[0].address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false,
+                    "address": "7 HALIFAX CT",
+                    "unit": "",
+                    "city": "MARLTON",
+                    "state": "NJ",
+                    "zip": "08053"
+                },
+                "location": {
+                    "_class": "docassemble.base.util.LatitudeLongitude",
+                    "instanceName": "other_parties[0].location",
+                    "gathered": false,
+                    "known": false
+                },
+                "previous_addresses": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddressList",
+                    "instanceName": "other_parties[0].previous_addresses",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.AssemblyLine.al_general.ALAddress"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "other_addresses": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddressList",
+                    "instanceName": "other_parties[0].other_addresses",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.AssemblyLine.al_general.ALAddress"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "mailing_address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "other_parties[0].mailing_address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "other_parties[0].mailing_address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false
+                },
+                "service_address": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALAddress",
+                    "instanceName": "other_parties[0].service_address",
+                    "location": {
+                        "_class": "docassemble.base.util.LatitudeLongitude",
+                        "instanceName": "other_parties[0].service_address.location",
+                        "gathered": false,
+                        "known": false
+                    },
+                    "_geocoded": false,
+                    "geolocated": false,
+                    "city_only": false
+                },
+                "previous_names": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALNameList",
+                    "instanceName": "other_parties[0].previous_names",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.base.util.IndividualName"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "aliases": {
+                    "_class": "docassemble.AssemblyLine.al_general.ALNameList",
+                    "instanceName": "other_parties[0].aliases",
+                    "elements": [],
+                    "auto_gather": true,
+                    "ask_number": false,
+                    "minimum_number": null,
+                    "object_type": {
+                        "_class": "type",
+                        "name": "docassemble.base.util.IndividualName"
+                    },
+                    "object_type_parameters": {},
+                    "complete_attribute": null,
+                    "ask_object_type": false
+                },
+                "preferred_name": {
+                    "_class": "docassemble.base.util.IndividualName",
+                    "instanceName": "other_parties[0].preferred_name",
+                    "uses_parts": true
+                },
+                "person_type": "business"
+            }
+        ],
+        "auto_gather": true,
+        "minimum_number": null,
+        "object_type": {
+            "_class": "type",
+            "name": "docassemble.AssemblyLine.al_general.ALIndividual"
+        },
+        "object_type_parameters": {},
+        "complete_attribute": null,
+        "ask_object_type": false,
+        "ask_number": true,
+        "target_number": 1,
+        "there_are_any": true,
+        "gathered": true,
+        "revisit": true
+    },
+    "sharing_choices": [
+        {
+            "tell_friend": "Tell a friend about this website"
+        },
+        {
+            "share_answers": "Share my answers and progress with someone"
+        }
+    ]
+}
