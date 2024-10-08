@@ -14,8 +14,6 @@ metadata:
   before_you_start: |
     This interview will help you write a letter to request a grievance hearing.
     
-    **Be sure to check with your local housing authority - they may have their own template. If that is the case, use their template. This form produces a letter to your housing authority**
-    
     Before you get started, please gather:
     
     1. The notice you received that outlined the action that the housing authority intends to take.
@@ -29,11 +27,11 @@ metadata:
     3. Hand deliver or mail your document to the housing authority.
     4. Verify that you are meeting the time requirements based on the nature of your issue.
     
-    ▪ Rent: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
+    ▪ **Rent**: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
     
-    ▪ Termination of lease: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
+    ▪ **Termination of lease**: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
     
-    ▪ Other matters: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
+    ▪ **Other matters**: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
   maturity: production
   estimated_completion_minutes: 10
   estimated_completion_delta: 5
@@ -152,11 +150,11 @@ subquestion: |
   3. Hand deliver or mail your document to the housing authority.
   4. Verify that you are meeting the time requirements based on the nature of your issue.
   
-  ▪ Rent: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
+  ▪ **Rent**: If you’re disputing how your rent was set, file a grievance within 14 days of receiving the housing authority’s rent notice.
   
-  ▪ Termination of lease: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
+  ▪ **Termination of lease**: If you’re disputing termination of your lease, file a grievance within 7 days after receiving the notice of lease termination.
   
-  ▪ Other matters: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
+  ▪ **Other matters**: If the grievance is about some other matter, file a grievance no more than 14 days after you first became aware (or should have become aware) of the matter.
 
   If you are a public housing resident and have received a notice from your housing authority, you can use this form to write a letter to request a grievance hearing that you are entitled to.
 
@@ -168,21 +166,35 @@ question: |
 subquestion: |
   This interview will help you write a letter to request a grievance hearing.
   
-  **Be sure to check with your local housing authority first - they may have their own template. If that is the case, use their template. This form produces a letter to your housing authority**
+  Read these statements before you continue: 
   
-  When prompted, be sure to include the name and address of your housing authority. If you do not know the name of the chair or head of the board, that's okay. Please just provide the name of the office (for example: "Boston Housing Authority")
+  - I live in public housing.
+
+  - I received a notice from my housing authority.
+
+  - An informal conference was held (usually with property manager).
+  
+  - I have *NOT* had a hearing.
+
+  - A court has *NOT* ordered me to move.
+  
+  If **ALL** of the statements above are true, click "Next"
 continue button field: Information
 ---
 id: Why do you want a grievance hearing
 question: |
-  Why do you want a grievance hearing?
-fields:
-  - "Why do you want to request a grievance hearing?": complaint_facts
-    input type: dropdown
-    choices:
+  Why do you want a hearing?
+subquestion: |
+  Choose one of the options below, or type your own reasons.
+  
       - I received an eviction notice telling me to leave my apartment.
+      
       - I have been unable to get repairs made.
+      
       - I received a rent increase that is higher than what I believe my rent should be.
+fields:
+  - "Why do you want to request a hearing?": complaint_facts
+    datatype: area
 ---
 id: preview letter_to_request_a_grievance_heari
 question: |
